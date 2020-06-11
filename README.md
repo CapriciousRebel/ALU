@@ -14,7 +14,6 @@ Design an IEEE floating-point single-precision (32-bit) ALU that supports the ar
 3. If you have 21Gb of space on your disk, and infinite download data: https://www.xilinx.com/support/download.html
 
 
-
 ### Goals:
 - [x] Initialize the repo
 

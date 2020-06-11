@@ -15,7 +15,7 @@ ALU alu1(A, B, Operation, Output);
             if (! $value$plusargs("A=%d", A)) begin
                 $display("ERROR: please specify +A=<value> to start.");
                 $finish;
-            end   
+            end
             if (! $value$plusargs("B=%d", B)) begin
                 $display("ERROR: please specify +B=<value> to start.");
                 $finish;

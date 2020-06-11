@@ -17,7 +17,6 @@ module FullAdder(a, b, carry_in, sum, carry);
     wire [31:0]carry2;
     wire [31:0]final_sum;
     wire [31:0]final_carry;
-
     // Main logic
     HalfAdder ha1(a, b, sum1, carry1);
     HalfAdder ha2(sum1, carry_in, final_sum, carry2);
