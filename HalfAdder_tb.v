@@ -14,11 +14,11 @@ HalfAdder ha1(A, B, Sum, Carry);
     initial begin
             // Check for arguments 
             if (! $value$plusargs("A=%d", A)) begin
-                $display("ERROR! Argument missing, format: +A=<value> +B=<value>");
+                $display("ERROR! Argument missing. format: +A=<value> +B=<value>");
                 $finish;
             end   
             if (! $value$plusargs("B=%d", B)) begin
-                $display("ERROR! Argument missing, format: +A=<value> +B=<value>");
+                $display("ERROR! Argument missing. format: +A=<value> +B=<value>");
                 $finish;
             end
             // display the variables and the output
