@@ -1,33 +1,33 @@
 `include "HalfAdder.v"
 module HalfAdder_tb;
     
-    // declare the regs
-    reg[31:0] a;   
-    reg[31:0] b;   
+    // 32 bit registers
+    reg[31:0]A;   
+    reg[31:0]B;   
     
-    // declare the wires
-    wire [31:0]sum;  
-    wire [31:0]carry;  
+    // 32 bit wires
+    wire[31:0]Sum;  
+    wire[31:0]Carry;  
 
-// Use HalfAdder
-HalfAdder ha1(a,b,sum,carry);
+// Instance of HalfAdder module
+HalfAdder ha1(A, B, Sum, Carry);
     initial begin
             // Check for arguments 
-            if (! $value$plusargs("a=%d", a)) begin
-                $display("ERROR: please specify +a=<value> to start.");
+            if (! $value$plusargs("A=%d", A)) begin
+                $display("ERROR! Argument missing, format: +A=<value> +B=<value>");
                 $finish;
             end   
-            if (! $value$plusargs("b=%d", b)) begin
-                $display("ERROR: please specify +b=<value> to start.");
+            if (! $value$plusargs("B=%d", B)) begin
+                $display("ERROR! Argument missing, format: +A=<value> +B=<value>");
                 $finish;
             end
             // display the variables and the output
-            $display ("a:     %d ",a);
-            $display ("b:     %d",b);
+            $display ("A:     %d", A);
+            $display ("B:     %d", B);
             // wait for 10ns
             #10;
-            $display ("sum:   %d", sum);
-            $display ("carry: %d", carry);
+            $display ("Sum:   %d", Sum);
+            $display ("Carry: %d", Carry);
             $finish;
         end
 endmodule

@@ -14,13 +14,20 @@ module ALU(A, B, Operation, Output);
     always@(a , b , operation)
     begin
         case (operation)
-            3'b000: Output = !a;      // NOT[WIP] 
-            3'b001: Output = a & b;   // AND[WIP]
-            3'b010: Output = a | b;   // OR[WIP]
-            3'b011: Output = a + b;   // addition[WIP]
-            3'b100: Output = a - b;   // subtraction[WIP]
-            3'b101: Output = a * b;   // multiplication[WIP] 
-            3'b110: Output = a / b;   // division[WIP] 
+            3'b000: 
+            Output = !a;      // NOT[WIP] 
+            3'b001: 
+            Output = a & b;   // AND[WIP]
+            3'b010: 
+            Output = a | b;   // OR[WIP]
+            3'b011: 
+            Output = a + b;   // addition[WIP]
+            3'b100: 
+            Output = a - b;   // subtraction[WIP]
+            3'b101: 
+            Output = a * b;   // multiplication[WIP] 
+            3'b110: 
+            Output = a / b;   // division[WIP] 
         endcase
     end
 
