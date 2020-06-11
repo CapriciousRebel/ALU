@@ -7,29 +7,29 @@ Design an IEEE floating-point single-precision (32-bit) ALU that supports the ar
 ### Goals:
 - [x] Initialize the repo
 
-[ ] Initialize the code
+- [ ] Initialize the code
 
-[ ] Write the code for ALU
+- [ ] Write the code for ALU
 
 #### Add operations:
 
-[ ] 1. Addition
+- [ ] 1. Addition
 
-[ ] 2. Subtaction
+- [ ] 2. Subtaction
 
-[ ] 3. Multiplication
+- [ ] 3. Multiplication
 
-[ ] 4. Division
+- [ ] 4. Division
 
-[ ] 5. NOT
+- [ ] 5. NOT
 
-[ ] 6. AND
+- [ ] 6. AND
 
-[ ] 7. OR
+- [ ] 7. OR
 
 ### Testbench:
 
-[ ] Write tests
+- [ ] Write tests
 
 
 
