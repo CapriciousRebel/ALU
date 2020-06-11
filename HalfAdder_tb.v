@@ -22,11 +22,11 @@ HalfAdder ha1(a,b,sum,carry);
                 $finish;
             end
             // display the variables and the output
-            $display ("a: %d ",a);
-            $display ("b: %d",b);
+            $display ("a:     %d ",a);
+            $display ("b:     %d",b);
             // wait for 10ns
             #10;
-            $display ("sum: %d", sum);
+            $display ("sum:   %d", sum);
             $display ("carry: %d", carry);
             $finish;
         end
