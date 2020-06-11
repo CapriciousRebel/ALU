@@ -1,14 +1,14 @@
-`include "FullAdder.v"
-module FullAdder_tb;
+`include "XOR.v"
+module XOR_tb;
     // 32 bit registers
     reg[31:0]A;
     reg[31:0]B;
-    reg[31:0]carry_in;
+
     // 32 bit wires
-    wire[31:0]Sum;
-    wire[31:0]Carry;
-    // Instance of OR module
-    FullAdder fa1(A, B, carry_in, Sum, Carry);
+    wire[31:0]XOR;
+
+// Instance of OR module
+XOR xor1(A, B, XOR);
     initial begin
             // Check for arguments 
             if (! $value$plusargs("A=%d", A)) begin
@@ -19,18 +19,12 @@ module FullAdder_tb;
                 $display("ERROR: please specify +B=<value> to start.");
                 $finish;
             end
-            if (! $value$plusargs("Carry=%d", carry_in)) begin
-                $display("ERROR: please specify +Carry=<value> to start.");
-                $finish;
-            end
             // display the variables and the output
-            $display ("A:        %d", A);
-            $display ("B:        %d", B);
-            $display ("carry_in: %d", carry_in);
+            $display ("A:     %d", A);
+            $display ("B:     %d", B);
             // wait for 10ns
             #10;
-            $display ("Sum:      %d", Sum);
-            $display ("Carry:    %d", Carry);
+            $display ("Output:   %d", XOR);
             $finish;
         end
 endmodule
