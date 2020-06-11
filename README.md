@@ -23,7 +23,7 @@ Design an IEEE floating-point single-precision (32-bit) ALU that supports the ar
 
 #### Arithmetic:
 
-- [ ] 1. Addition
+- [x] 1. Addition
 
 - [ ] 2. Subtaction
 

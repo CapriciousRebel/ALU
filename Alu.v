@@ -1,17 +1,17 @@
 `include "includer.v"
 
+
 module ALU(A, B, OpCode, CarryIn, Output, CarryOut);
     // Inputs
     input [31:0] A;
     input [31:0] B;
     input [2:0] OpCode;
     input [31:0] CarryIn;
+    
     // Outputs
-    output [31:0]Output;
-    output [31:0]CarryOut;
-    // Registers
-    reg [31:0] Output;
-    reg [31:0] CarryOut;
+    output reg[31:0]Output;
+    output reg[31:0]CarryOut;
+    
     // Wires
     wire [31:0] Add, Sub, Mul, Div, And, Or, Not, Redundant, CarryOutWire, OutputWire;
     
@@ -39,6 +39,7 @@ module ALU(A, B, OpCode, CarryIn, Output, CarryOut);
         111 => XOR
     */
     Multiplexer8To1 Mux(Add, Sub, Mul, Div, And, Or, Not, Redundant, OpCode, OutputWire);
+    // Put the values back in the registers
     always @ (Add, Sub, Mul, Div, And, Or, Not)
     assign CarryOut = CarryOutWire;
     always @ (Add, Sub, Mul, Div, And, Or, Not)
