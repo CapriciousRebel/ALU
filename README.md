@@ -5,7 +5,7 @@
 Design an IEEE floating-point single-precision (32-bit) ALU that supports the arithmetic and logic operations: addition, subtraction, multiplication, division, AND, OR, NOT.
 
 ### Goals:
-[ x ] Initialize the repo
+- [x] Initialize the repo
 
 [ ] Initialize the code
 
