@@ -4,12 +4,9 @@ module OR(A, B, Output);
     input[31:0]B;   // 32 bit input B
 
     // Outputs
-    output[31:0]Output;  // bitwise OR of A and B
-
-    // Registers
-    reg[31:0]Output;
+    output reg[31:0]Output;  // bitwise OR of A and B
     
-    // Main
+    // Logic
     always@(A, B)
     begin
         // Output is bitwise OR of (A, B)
