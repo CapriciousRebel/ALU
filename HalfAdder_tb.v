@@ -1,28 +1,33 @@
-// behavioral modeling
+`include "HalfAdder.v"
 module HalfAdder_tb;
-    reg[31:0] a;   // first number
-    reg[31:0] b;   // second number
-    wire [31:0]sum;  // sum of a+b
-    wire [31:0]carry;  // carry of a+b
+    
+    // declare the regs
+    reg[31:0] a;   
+    reg[31:0] b;   
+    
+    // declare the wires
+    wire [31:0]sum;  
+    wire [31:0]carry;  
 
+// Use HalfAdder
 HalfAdder ha1(a,b,sum,carry);
-
-
-
     initial begin
-        if (! $value$plusargs("a=%d", a)) begin
-            $display("ERROR: please specify +a=<value> to start.");
+            // Check for arguments 
+            if (! $value$plusargs("a=%d", a)) begin
+                $display("ERROR: please specify +a=<value> to start.");
+                $finish;
+            end   
+            if (! $value$plusargs("b=%d", b)) begin
+                $display("ERROR: please specify +b=<value> to start.");
+                $finish;
+            end
+            // display the variables and the output
+            $display ("a: %d ",a);
+            $display ("b: %d",b);
+            // wait for 10ns
+            #10;
+            $display ("sum: %d", sum);
+            $display ("carry: %d", carry);
             $finish;
-        end   
-        if (! $value$plusargs("b=%d", b)) begin
-            $display("ERROR: please specify +b=<value> to start.");
-            $finish;
-        end   
-        $display ("a: %d ",a);
-        $display ("b: %d",b);
-        wait (sum) $display ("sum: %d", sum);
-        wait (carry) $display ("carry: %d", carry);
-        $finish;
-    end
-
+        end
 endmodule
