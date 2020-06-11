@@ -1,22 +1,22 @@
-module HalfAdder(a,b,sum,carry);
+module HalfAdder(A, B, Sum, Carry);
     // Inputs
-    input[31:0]a;   // 32 bit input a
-    input[31:0]b;   // 32 bit input b
+    input[31:0]       A;   // 32 bit input A
+    input[31:0]       B;   // 32 bit input B
 
     // Outputs
-    output[31:0]sum;  // sum of a+b
-    output[31:0]carry;  // carry of a+b
+    output[31:0]    Sum;  // sum of a+b
+    output[31:0]  Carry;  // carry of a+b
 
-    // declare the regs
-    reg[31:0]sum;
-    reg[31:0]carry;
-    
-    // main logic
-    always@(a, b)
+    // Registers
+    reg[31:0]       Sum;
+    reg[31:0]     Carry;
+
+    // Main
+    always@(A, B)
     begin
-        // sum is bitwise XOR of a, b
-        sum  = a ^ b;  
-        // carry is bitwise AND of a, b
-        carry =  a & b;  
+        // Sum is bitwise XOR of (A, B)
+        Sum     = A ^ B;
+        // Carry is bitwise AND of (A, B)
+        Carry   = A & B;  
     end
 endmodule
