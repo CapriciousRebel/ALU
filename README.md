@@ -39,8 +39,3 @@ Design an IEEE floating-point single-precision (32-bit) ALU that supports the ar
 - [x] 6. AND
 
 - [x] 7. OR
-
-
-
-
-
