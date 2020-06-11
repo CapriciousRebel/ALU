@@ -1,0 +1,7 @@
+`include "AND.v"
+`include "NOT.v"
+`include "FullAdder.v"
+`include "Multiplier.v"
+`include "Dividor.v"
+`include "Subtractor.v"
+`include "Multiplexer.v"

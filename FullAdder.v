@@ -1,3 +1,5 @@
+`include "HalfAdder.v"
+`include "OR.v"
 module FullAdder(a, b, carry_in, sum, carry);
     // Inputs
     input[31:0]a;   // 32 bit input a
@@ -10,14 +12,20 @@ module FullAdder(a, b, carry_in, sum, carry);
     reg[31:0]sum;
     reg[31:0]carry;
     //declare the wires
-    wire w1, w2, w3;
+    wire [31:0]sum1;
+    wire [31:0]carry1;
+    wire [31:0]carry2;
+    wire [31:0]final_sum;
+    wire [31:0]final_carry;
+    // Main logic
+    HalfAdder ha1(a, b, sum1, carry1);
+    HalfAdder ha2(sum1, carry_in, final_sum, carry2);
+    OR or0(carry1, carry2, final_carry);
 
-    // main logic
-    always@(a, b, carry_in)
-    begin
-        // sum is bitwise XOR of a, b
-        sum  = a ^ b;  
-        // carry is bitwise AND of a, b
-        carry =  a & b;  
-    end
+    // Connect wires back to registers
+    always@(a, b, carry_in,final_carry,final_sum)
+    assign carry = final_carry;
+    always@(a, b, carry_in,final_carry,final_sum)
+    assign sum = final_sum;
+    
 endmodule

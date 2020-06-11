@@ -10,11 +10,11 @@ module AND_tb;
 // Instance of AND module
 AND and1(A, B, AND);
     initial begin
-            // Check fAND arguments 
+            // Check AND arguments
             if (! $value$plusargs("A=%d", A)) begin
                 $display("ERROR! Argument missing. format: +A=<value> +B=<value>");
                 $finish;
-            end   
+            end
             if (! $value$plusargs("B=%d", B)) begin
                 $display("ERROR! Argument missing. format: +A=<value> +B=<value>");
                 $finish;
