@@ -1,26 +1,25 @@
-`include "AND.v"
+`include "XOR.v"
 
-
-module AND_tb;
+module XOR_tb;
     // Registers
     reg[31:0]A;
     reg[31:0]B;
 
     // Wires
-    wire[31:0]AND;
+    wire[31:0]XOR;
 
-    // Instance of AND module
-    AND and1(A, B, AND);
+    // Instance of XOR module
+    XOR xor1(A, B, XOR);
 
     // Main
     initial begin
         // Check for arguments
         if (! $value$plusargs("A=%d", A)) begin
-            $display("ERROR! Argument missing. format: +A=<value> +B=<value>");
+            $display("ERROR: please specify +A=<value> to start.");
             $finish;
-        end
+        end   
         if (! $value$plusargs("B=%d", B)) begin
-            $display("ERROR! Argument missing. format: +A=<value> +B=<value>");
+            $display("ERROR: please specify +B=<value> to start.");
             $finish;
         end
         // Display Results
@@ -28,7 +27,7 @@ module AND_tb;
         $display ("B:     %d", B);
         // wait for 10ns
         #10;
-        $display ("Output:   %d", AND);
+        $display ("Output:   %d", XOR);
         $finish;
-    end
+        end
 endmodule

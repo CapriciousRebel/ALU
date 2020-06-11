@@ -1,7 +1,12 @@
-`include "AND.v"
+// Logical
 `include "NOT.v"
-`include "FullAdder.v"
-`include "Multiplier.v"
-`include "Dividor.v"
-`include "Subtractor.v"
+// Bitwise
+`include "AND.v"
+//`include "OR.v"
+// Arithmetic
+`include "ADD.v"
+`include "SUB.v"
+`include "MUL.v"
+`include "DIV.v"
+// Multiplexer
 `include "Multiplexer.v"

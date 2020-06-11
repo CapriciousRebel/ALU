@@ -1,4 +1,4 @@
-module AND(A, B, Output);
+module XOR(A, B, Output);
     // Inputs
     input[31:0]A;
     input[31:0]B;
@@ -6,8 +6,10 @@ module AND(A, B, Output);
     // Outputs
     output reg[31:0]Output;
     
-    // Logic
+    // Main
     always@(A, B)
-        // Output is bitwise AND of (A, B)
-        Output = A & B;
+    begin
+        // Output is bitwise XOR of (A, B)
+        Output = A ^ B;
+    end
 endmodule
