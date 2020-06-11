@@ -37,7 +37,7 @@ module ALU_tb;
         // display the variables and the output
         $display ("A:          %d", A);
         $display ("B:          %d", B);
-        $display ("OpCode:     %d", OpCode);
+        $display ("OpCode:              %d", OpCode);
         $display ("CarryIn:    %d", CarryIn);
         // wait for 10ns
         #10;

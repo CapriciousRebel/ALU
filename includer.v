@@ -2,7 +2,7 @@
 `include "NOT.v"
 // Bitwise
 `include "AND.v"
-//`include "OR.v"
+`include "OR.v"
 // Arithmetic
 `include "ADD.v"
 `include "SUB.v"
